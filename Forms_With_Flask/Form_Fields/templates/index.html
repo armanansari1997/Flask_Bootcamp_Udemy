@@ -1,0 +1,14 @@
+<h1>Welcome to the Puppy Servey</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.breed.label }} {{ form.breed }} <br><br>
+    {{ form.neutered.label }} {{ form.neutered }} <br><br>
+    {{ form.mood.label }} {{form.mood}} <br><br>
+    {{ form.food_choice.label }} {{ form.food_choice }} <br><br>
+    Any other feedback ? <br><br>
+    {{ form.feedback()}} <br><br>
+    {{form.submit}}
+
+
+
+</form>
