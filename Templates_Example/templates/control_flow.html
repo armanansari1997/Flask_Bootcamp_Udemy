@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Control Flow</title>
+</head>
+<body>
+
+    {% if is_user_logged_in %}
+        <h1>Welcome to the Dashboard</h1>
+    {% else %}
+        <h1>Please Login!!</h1>
+    {% endif %}
+
+    {#
+    <ul>
+        {% for puppy in puppy_names %}
+            <li>{{puppy}}</li>
+        {% endfor %}
+    </ul>
+
+    {% if 'Rufus' in puppy_names %}
+        <p>Found you Rufus !!!</p>
+    {% else %}
+        <p>Hmm.. Rufus is not in this list</p>
+    {% endif %}
+    #}
+
+    
+</body>
+</html>

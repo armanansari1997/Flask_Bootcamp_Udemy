@@ -1,0 +1,9 @@
+{# Pupppy Page#}
+{% extends 'base.html' %}
+
+{% block content %}
+{# <h1>This is a puppy page for : {{name}}</h1> #}
+<h1>This is a puppy page for : {{name|capitalize}}</h1>
+<a href="{{ url_for('static', filename='puppy_pic.avif') }}">Here</a>
+{% endblock content %}
+
