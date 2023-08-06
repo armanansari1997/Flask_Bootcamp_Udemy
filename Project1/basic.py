@@ -18,11 +18,9 @@ def thank_you():
     last = request.args.get('last_name')
     return render_template('thankyou.html', first=first, last=last)
 
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html')
-
 
 
 if __name__ == '__main__':
