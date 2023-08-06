@@ -13,7 +13,7 @@ def info():
 
 @app.route('/name_info/<name>')
 def name_info(name):
-    # Converting the name into Upper case letters
+    # Accessing the 100th element of the string
     # getting StringIndexOutOfRangeError
     return f"<h1>100th Letter : {name[100]}</h1>"
 
