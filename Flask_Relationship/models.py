@@ -48,7 +48,7 @@ class Puppy(db.Model):
         for toy in self.toys:
             print(toy.item_name)
 
-class Toy(db. Model):
+class Toy(db.Model):
     
     __tablename__ = 'toys'
     
@@ -65,7 +65,7 @@ class Toy(db. Model):
 
 class Owner(db.Model):
     
-    __table_name__ = 'owners'
+    __tablename__ = 'owners'
     
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
