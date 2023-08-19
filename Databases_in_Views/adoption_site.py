@@ -3,7 +3,7 @@
 import os
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migration
+from flask_migrate import Migrate
 from forms import AddForm, DelForm
 
 
@@ -23,7 +23,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.app_context().push()
 
 db = SQLAlchemy(app)
-Migration(app, db)
+Migrate(app, db)
 
 ##########################
 #### MODELS ##############
@@ -71,14 +71,14 @@ def list_pup():
 
 
 @app.route('/delete', methods=['GET', 'POST'])
-def delete():
+def del_pup():
     form = DelForm()
     
     if form.validate_on_submit():
         id = form.id.data
         pup = db.session.get(Puppy, id)
         # pup = Puppy.query.get(id) # Alternate (Giving error Hence, used 'db.session.get(Puppy, id)')
-        db.sesion.delete(pup)
+        db.session.delete(pup)
         db.session.commit()
         return redirect(url_for('list_pup'))
     
